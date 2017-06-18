@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.niit.hotel.activity.LoginActivity">
+
+    <com.example.niit.hotel.Utils.CustomVideoView
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="250dp"
+       android:orientation="vertical">
+       <EditText
+           android:id="@+id/et_login_name"
+           android:layout_width="315dp"
+           android:layout_height="wrap_content"
+           android:inputType="textPersonName"
+           android:layout_gravity="center"
+           android:textColorHint="#fff"
+           android:textColor="@color/login"
+           android:hint="请输入用户名"
+           android:background="@drawable/round_editstyle"
+           android:ems="10" />
+
+       <EditText
+           android:id="@+id/et_login_pwd"
+           android:layout_width="315dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:layout_gravity="center"
+           android:ems="10"
+           android:hint="请输入密码"
+           android:textColorHint="#fff"
+           android:textColor="@color/login"
+           android:background="@drawable/round_editstyle"
+           android:inputType="textPassword" />
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="380dp">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border"
+            android:layout_gravity="center"
+            android:text="登 录"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:text="注 册"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:layout_marginTop="35dp"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:text="忘记密码"/>
+    </LinearLayout>
+
+</RelativeLayout>
