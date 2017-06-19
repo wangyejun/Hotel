@@ -9,6 +9,7 @@ import com.example.niit.hotel.fragment.MyFragment;
 import com.example.niit.hotel.fragment.ReserveFragment;
 
 public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+    /*声明控件是对象*/
     private RadioGroup radioGroup;
 
     ReserveFragment reserveFragment = new ReserveFragment();
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     }
 
     private void intitView(){
+        /*对控件进行监听*/
         radioGroup = (RadioGroup) findViewById(R.id.radiogroup);
 
         radioGroup.check(R.id.rb_reserve);
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup,int i) {
+        //点击控件后进行fragment之间的切换
         switch (i){
             case R.id.rb_reserve:
                 getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,reserveFragment).commit();

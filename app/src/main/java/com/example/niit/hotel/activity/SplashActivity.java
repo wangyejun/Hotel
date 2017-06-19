@@ -17,6 +17,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //对Bmob进行初始化，需要在setContentView方法之前
         Bmob.initialize(this, "849af1025fcfccdd5cd728d8b8aa3ef7");
         //取消标题栏
         requestWindowFeature(Window.FEATURE_NO_TITLE);
