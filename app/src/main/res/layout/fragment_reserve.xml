@@ -7,14 +7,14 @@
 
     <RelativeLayout
         android:id="@+id/hote_search"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/preference_single_item"
         android:clickable="true"
         android:gravity="center_vertical"
         android:paddingBottom="20dp"
-        android:paddingTop="30dp" >
+        android:paddingTop="20dp" >
 
         <ImageView
             android:id="@+id/search"
@@ -230,7 +230,7 @@
             android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button_border"
             android:text="搜索" />
     </RelativeLayout>

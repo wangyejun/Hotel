@@ -5,5 +5,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/login"
+        android:gravity="center">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:text="x x"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/indent"
+                android:gravity="center_horizontal"
+                android:button="@null"
+                android:text="全部订单"/>
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:drawableTop="@mipmap/payment"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="代付款"/>
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:drawableTop="@mipmap/trip"
+                android:button="@null"
+                android:text="未出行"/>
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/comment"
+                android:gravity="center_horizontal"
+                android:button="@null"
+                android:text="待点评"/>
+
+        </RadioGroup>
+    </LinearLayout>
 </LinearLayout>

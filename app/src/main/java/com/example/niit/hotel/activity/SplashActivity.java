@@ -11,8 +11,26 @@ import com.example.niit.hotel.MainActivity;
 import com.example.niit.hotel.R;
 
 import cn.bmob.v3.Bmob;
+import cn.bmob.v3.BmobUser;
 
 public class SplashActivity extends AppCompatActivity {
+    Handler handler = new Handler();
+    Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    };
+    Runnable runnable1 = new Runnable() {
+        @Override
+        public void run() {
+            Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +42,12 @@ public class SplashActivity extends AppCompatActivity {
         //取消状态栏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
-
-        //设置欢迎页面3秒后跳转到登录界面
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent  = new Intent(SplashActivity.this, LoginActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        },3000);
+        //获取当前用户信息，登录过一次后下一次登录无需登录
+        BmobUser bmobUser = BmobUser.getCurrentUser();
+        if (bmobUser!=null){
+            handler.postDelayed(runnable1,3000);
+        }else {
+            handler.postDelayed(runnable,3000);
+        }
     }
 }
