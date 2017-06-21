@@ -69,7 +69,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         final String pwd1 = et_register_pwd1.getText().toString();
         final String pwd2 = et_register_pwd2.getText().toString();
 
-        //对输入框进行判断，isEmpty是判断输入框是否有字符存在
+        //对输入框进行判断，isEmpty是判断输入框是否有字符的存在
         if (name.isEmpty()&& pwd1.isEmpty()) {
             Toast.makeText(this, "密码或账号不能为空", Toast.LENGTH_SHORT).show();
         }else if (name.isEmpty()){

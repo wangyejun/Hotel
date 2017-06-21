@@ -95,7 +95,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void login(){
         String name = et_login_name.getText().toString();
         String pwd1 = et_login_pwd.getText().toString();
-        //对输入框进行判断，isEmpty是判断输入框是否有字符存在
+        //对输入框进行判断，isEmpty是判断输入框是否有字符的存在
         if (name.isEmpty()&&pwd1.isEmpty()) {
             Toast.makeText(this, "用户名密码不能为空", Toast.LENGTH_SHORT).show();
         }else if (name.isEmpty()){
