@@ -1,8 +1,5 @@
-package com.example.niit.hotel.model;
+package com.example.niit.hotel.entity;
 
-import com.example.niit.hotel.activity.LoginActivity;
-
-import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.BmobUser;
 
 /**

@@ -1,59 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@+id/hote_search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/preference_single_item"
-        android:clickable="true"
-        android:gravity="center_vertical"
-        android:paddingBottom="20dp"
-        android:paddingTop="20dp" >
-
-        <ImageView
-            android:id="@+id/search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:scaleType="matrix"
-            android:src="@drawable/ic_search_nearby" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:scaleType="matrix"
-            android:src="@drawable/mm_submenu" />
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/search"
-            android:layout_marginLeft="4dp"
-            android:layout_toRightOf="@+id/search"
-            android:text="搜索身边的酒店" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/search"
-            android:layout_marginLeft="4dp"
-            android:layout_toRightOf="@+id/search"
-            android:text="无法定位"
-            android:textColor="@android:color/black" />
-    </RelativeLayout>
-
-    <RelativeLayout
+        android:id="@+id/city"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
@@ -61,7 +13,7 @@
         android:clickable="true"
         android:gravity="center_vertical"
         android:paddingBottom="10dp"
-        android:paddingTop="10dp" >
+        android:paddingTop="10dp">
 
         <ImageView
             android:id="@+id/imageView1"
@@ -88,12 +40,13 @@
             android:src="@drawable/mm_submenu" />
 
         <TextView
+            android:id="@+id/show"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/imageView6"
             android:layout_centerVertical="true"
-            android:textColor="@android:color/black"
-            android:text="南京" />
+            android:layout_toLeftOf="@+id/imageView6"
+            android:text="南京"
+            android:textColor="@android:color/black" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -104,7 +57,7 @@
         android:clickable="true"
         android:gravity="center_vertical"
         android:paddingBottom="10dp"
-        android:paddingTop="10dp" >
+        android:paddingTop="10dp">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -117,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/imageView2"
-            android:text="入住\n离店" />
+            android:text="入住" />
 
         <ImageView
             android:id="@+id/imageView7"
@@ -135,27 +88,82 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/imageView7"
-            android:textColor="@android:color/black"
-            android:text="周六\n周日" />
+            android:text="周六\n周日"
+            android:textColor="@android:color/black" />
 
         <TextView
+            android:id="@+id/tv_rili"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/textView5"
             android:layout_centerVertical="true"
             android:layout_marginRight="2dp"
-            android:textColor="@color/login"
-            android:text="2017-06-18\n2017-06-19" />
+            android:layout_toLeftOf="@+id/textView5"
+            android:text="2017-06-18\n2017-06-19"
+            android:textColor="@color/login" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/likaijiudian"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/preference_item"
         android:clickable="true"
         android:gravity="center_vertical"
         android:paddingBottom="10dp"
-        android:paddingTop="10dp" >
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_hotel_calendar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageView11"
+            android:text="离开" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:scaleType="matrix"
+            android:src="@drawable/mm_submenu" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView17"
+            android:text="周六\n周日"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_rililikai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@+id/textView15"
+            android:text="2017-06-18\n2017-06-19"
+            android:textColor="@color/login" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/site"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/preference_item"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
 
         <ImageView
             android:id="@+id/imageView3"
@@ -172,21 +180,23 @@
             android:text="关键字" />
 
         <TextView
+            android:id="@+id/tv_toponymy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:text="酒店名/地名" />
+            android:layout_centerVertical="true"
+            android:text="地名" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/price"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/preference_item"
         android:clickable="true"
         android:gravity="center_vertical"
         android:paddingBottom="10dp"
-        android:paddingTop="10dp" >
+        android:paddingTop="10dp">
 
         <ImageView
             android:id="@+id/imageView4"
@@ -213,26 +223,30 @@
             android:src="@drawable/mm_submenu" />
 
         <TextView
+            android:id="@+id/tv_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/imageView5"
             android:layout_centerVertical="true"
-            android:text="不限价格"
+            android:layout_toLeftOf="@+id/imageView5"
+            android:text="价格"
             android:textColor="@android:color/black" />
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:paddingBottom="10dp"
-        android:paddingTop="10dp" >
+        android:paddingTop="10dp">
+
         <Button
+            android:id="@+id/btn_uploading"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
             android:background="@drawable/button_border"
-            android:text="搜索" />
+            android:text="提交订单"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
 </LinearLayout>

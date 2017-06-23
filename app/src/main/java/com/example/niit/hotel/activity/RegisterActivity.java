@@ -5,14 +5,12 @@ import android.graphics.Color;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.niit.hotel.R;
-import com.example.niit.hotel.model.MyUser;
 
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
@@ -88,7 +86,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         user.signUp(new SaveListener<BmobUser>() {
             @Override
             public void done(BmobUser bmobUser,BmobException e) {
-                if (e == null && pwd1 == pwd2){
+                if (e == null || pwd1 == pwd2){
                     //signup方法进行注册并且需要两次密码输入相同的情况下提示注册成功并跳转到登录界面
                     Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(RegisterActivity.this,LoginActivity.class));

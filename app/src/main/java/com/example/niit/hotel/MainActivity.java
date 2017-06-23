@@ -39,8 +39,14 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         radioGroup = (RadioGroup) findViewById(R.id.radiogroup);
 
         radioGroup.check(R.id.rb_reserve);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,reserveFragment).commit();
     }
+
     private void initEvent(){
         radioGroup.setOnCheckedChangeListener(this);
     }
@@ -57,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 break;
             case R.id.rb_my:
                 getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,myFragment).commit();
+                break;
         }
     }
 
