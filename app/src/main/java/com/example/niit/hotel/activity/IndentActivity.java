@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.example.niit.hotel.MainActivity;
 import com.example.niit.hotel.R;
 import com.example.niit.hotel.adapter.OrderAdapter;
 import com.example.niit.hotel.db.OrderInfo;
@@ -71,7 +72,6 @@ public class IndentActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.indent_back:
-                setResult(0);
                 finish();
                 break;
         }

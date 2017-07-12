@@ -43,8 +43,7 @@ public class MyFragment extends Fragment implements RadioGroup.OnCheckedChangeLi
     public void onCheckedChanged(RadioGroup radioGroup,int i) {
         switch (i){
             case R.id.indent:
-//                startActivity(new Intent(getActivity(), IndentActivity.class));
-                startActivityForResult(new Intent(getContext(),IndentActivity.class),0);
+                startActivity(new Intent(getActivity(), IndentActivity.class));
                 break;
             case R.id.payment:
                 startActivity(new Intent(getActivity(),PaymentActivity.class));

@@ -1,5 +1,6 @@
 package com.example.niit.hotel;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.provider.Settings;
@@ -29,7 +30,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         intitView();
         initEvent();
     }
